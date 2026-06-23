@@ -1,18 +1,6 @@
 import { MongoClient } from "mongodb";
 
-// MONGO DB CONNECTION
-
-function MyMongoDB() {
-  // helper function to connect to the database and return the client and users collection
-  async function getClient() {
-    const client = await MongoClient.connect("mongodb://localhost:37017/"); // PLACEHOLDER URL
-    const users = client.db("user_management").collection("users");
-
-    return { client, users };
-  }
-  const me = {};
-
-  me.getUser = async function (filter = {}, { sort = { _id: -1 } } = {}) {
+me.getUser = async function (filter = {}, { sort = { _id: -1 } } = {}) {
     const { client, users } = await getClient();
 
     try {
@@ -78,14 +66,9 @@ function MyMongoDB() {
             bio: bio,
           },
         },
-      );
+      );a
       console.log(`User ${result._id} updated`);
     }
 
     return me;
   }
-
-  const myMongoDB = MyMongoDB();
-
-  export default myMongoDB;
-}
