@@ -3,17 +3,7 @@ import express from "express";
 //const router = express.Router();
 const app = express();
 
-// will be replaced by mongodb data
-const profile = [
-  {
-    name: "Jane Doe",
-    username: "janedoe",
-    email: "janedoe@example.com",
-    industryTags: [],
-    location: "Boston, MA",
-    bio: "Passionate about using technology to solve real-world problems. Experienced in software development and project management.",
-  },
-];
+// data in users.json
 
 // Define routes for the profile page
 //router.get("/profile", (req, res) => {
