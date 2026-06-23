@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+  </head>
+  <body>
+    <!-- No security for now, anyone can edit any user profile - would be an extension once a login system is added. -->
+    <h1>Profile</h1> 
+    <p>
+      Please use the form below to either create a new profile or edit an existing one. 
+      Please note that only a username is required in order to create/update a profile,
+       and the number of industry tags is currently limited to 4.
+    </p>
+
+    <h2>Profile Form</h2>
+
+<form id="profileForm">
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name">
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email">
+
+    <label for="inTags"><b>Industry Tags</b></label>
+    <input type="text" placeholder="Enter Industry Tag" name="inTags">
+    <input type="text" placeholder="Enter Industry Tag" name="inTags">
+    <input type="text" placeholder="Enter Industry Tag" name="inTags">
+    <input type="text" placeholder="Enter Industry Tag" name="inTags">
+
+    <label for="location"><b>Location</b></label>
+    <input type="text" placeholder="Enter Location" name="location">
+
+    <label for="bio"><b>Bio</b></label>
+    <input type="text" placeholder="Enter Bio" name="bio">
+        
+    <button type="submit">Save Profile</button>
+    <button type="delete">Delete Profile</button>
+    
+</form>
+  </body>
+</html>
