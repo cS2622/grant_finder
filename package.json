@@ -1,5 +1,4 @@
-{
-  "name": "grant_finder",
+ { "name": "grant_finder",
   "version": "1.0.0",
   "description": "A startup funding discovery platform where users from different industries and communities can find different reputable grant opportunities and create personal profiles to connect with others. Based on what kind of startup the user is involved in, the platform matches them to possible funding and helps guide them through applying.",
   "main": "backend.js",
@@ -26,5 +25,5 @@
     "express": "^5.2.1",
     "nodemon": "^3.1.14",
     "mongodb": "^6.12.0"
-  },
-}
+  }
+ }
