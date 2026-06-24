@@ -1,6 +1,6 @@
 import express from "express";
-import profileRouter from "./routes/profile.js";
-import connectionsRouter from "./routes/connections.js";
+import userRouter from "./routes/users.js";
+import { connectClient } from "./db/my_mongodb.js";
 
 // EXPRESS SETUP
 console.log("Initializing backend server for Grant Finder application...");
@@ -8,10 +8,13 @@ console.log("Initializing backend server for Grant Finder application...");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(express.static("frontend"));
+app.use(express.json());
+app.use(express.static("./frontend"));
 
-app.use("/api/profile", profileRouter);
-app.use("/api/connections", connectionsRouter);
+const db = await connectClient();
+app.locals.db = db;
+
+app.use("/api/users", userRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
