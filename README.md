@@ -6,10 +6,9 @@ A startup funding discovery platform where users from different industries and c
 
 Currently the project has the profile, connections and home pages implemented in full stack. If the other half of the project was to be completed it would include the grant search page and the saved collection page. It would also then include a footer with, ""This product uses the Grants.gov API but is not endorsed or certified by the U.S. Department of Health and Human Services."
 
-## Installation
-
 ## Project Execution
 
+Access the publically deployed site on Render at: 
 ### Demo Screenshots
 
 ## Project Objective
