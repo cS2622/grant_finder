@@ -1,0 +1,29 @@
+{
+  "name": "grant_finder",
+  "version": "1.0.0",
+  "description": "A startup funding discovery platform where users from different industries and communities can find different reputable grant opportunities and create personal profiles to connect with others. Based on what kind of startup the user is involved in, the platform matches them to possible funding and helps guide them through applying.",
+  "main": "backend.js",
+  "type": "module",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js backend.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cS2622/grant_finder.git"
+  },
+  "keywords": [],
+  "author": "Claire Stanton & Aartika Parmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cS2622/grant_finder/issues"
+  },
+  "homepage": "https://github.com/cS2622/grant_finder#readme",
+  "devDependencies": {
+    "prettier": "3.8.4"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
