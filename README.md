@@ -8,8 +8,15 @@ Currently the project has the profile, connections and home pages implemented in
 
 ## Project Execution
 
-Access the publically deployed site on Render at: 
+Access the publically deployed site on Render at: https://grant-finder.onrender.com
+
 ### Demo Screenshots
+
+In images folder.
+
+## Video Demo
+
+https://youtu.be/mY_sOaoPlqQ 
 
 ## Project Objective
 
