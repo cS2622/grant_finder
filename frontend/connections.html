@@ -40,10 +40,22 @@
         </div>
       </div>
     </nav>
-    <!-- No security for now, anyone can edit any user profile - would be an extension once a login system is added. -->
     <h1>Connections</h1>
     <p>
-      Listed below are 
+      Listed below are the users that have created profiles on this site. Use
+      the page buttons on the bottom of the page to see more users.
     </p>
+    <div class="container">
+      <div id="users-grid" class="row mt-4"></div>
+      <div class="row mt-4">
+        <button id="loadPrevBtn" class="col btn btn-primary mt-4">
+          Previous Page
+        </button>
+        <button id="loadMoreBtn" class="col btn btn-primary mt-4">
+          Next Page
+        </button>
+      </div>
+    </div>
+    <script type="module" src="js/connections.js"></script>
   </body>
 </html>

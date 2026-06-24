@@ -14,4 +14,5 @@ export async function connectClient() {
     console.error(e);
   }
 }
+
 export const db = await connectClient();

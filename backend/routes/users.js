@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
 });
 
 // get single user based on username in url
-router.get("/username/:username", async (req, res) => {
+router.get("/:username", async (req, res) => {
   const db = req.app.locals.db;
   const user = await db
     .collection("users")
@@ -24,13 +24,13 @@ router.get("/username/:username", async (req, res) => {
 // post new user
 router.post("/", async (req, res) => {
   const db = req.app.locals.db;
-  const { name, username, email, industryTags, location, bio } = req.body;
+  const { name, username, email, industry_tags, location, bio } = req.body;
 
   const result = await db.collection("users").insertOne({
     name,
     username,
     email,
-    industryTags,
+    industry_tags,
     location,
     bio,
   });
@@ -39,22 +39,26 @@ router.post("/", async (req, res) => {
 });
 
 // put update user
-router.put("/username/:username", async (req, res) => {
+router.put("/:username", async (req, res) => {
   const db = req.app.locals.db;
-  const { name, username, email, industryTags, location, bio } = req.body;
+  // DELETETHIS
+  console.log("params:", req.params);
+  console.log("body:", req.body);
+
+  const { name, username, email, industry_tags, location, bio } = req.body;
 
   const result = await db
     .collection("users")
     .updateOne(
       { username: req.params.username },
-      { $set: { name, username, email, industryTags, location, bio } },
+      { $set: { name, email, industry_tags, location, bio } },
     );
 
   res.json(result);
 });
 
 // delete user
-router.delete("/username/:username", async (req, res) => {
+router.delete("/:username", async (req, res) => {
   const db = req.app.locals.db;
   await db.collection("users").deleteOne({ username: req.params.username });
   res.json({ success: true });
