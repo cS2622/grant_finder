@@ -5,7 +5,7 @@ async function fetchUsers() {
   try {
     const res = await fetch("/api/users");
     const users = await res.json();
-    console.log("Fetched users data:", users);
+    //console.log("Fetched users data:", users);
 
     const grid = document.getElementById("users-grid");
 

@@ -20,9 +20,7 @@ if (uname) {
 // add/update user
 document.getElementById("submitBtn").addEventListener("click", async (e) => {
   e.preventDefault();
-  // DELETETHIS
-  console.log("submitted button, uname:", uname);
-
+  
   const payload = {
     name: document.getElementById("name").value.trim(),
     email: document.getElementById("email").value.trim(),
@@ -37,9 +35,6 @@ document.getElementById("submitBtn").addEventListener("click", async (e) => {
   };
 
   if (uname) {
-    // DELETETHIS
-    console.log("payload:", payload);
-    console.log("uname:", uname);
 
     await fetch(`/api/users/${uname}`, {
       method: "PUT",
@@ -48,7 +43,7 @@ document.getElementById("submitBtn").addEventListener("click", async (e) => {
     });
     window.location.href = `/profile.html?username=${uname}`;
 
-    console.log(`Updated user: ${uname}`);
+    //console.log(`Updated user: ${uname}`);
   } else {
     const newUsername = document.getElementById("username").value.trim();
     await fetch(`/api/users`, {
@@ -58,7 +53,7 @@ document.getElementById("submitBtn").addEventListener("click", async (e) => {
     });
     window.location.href = `/profile.html?username=${newUsername}`;
 
-    console.log(`Created new user: ${newUsername}`);
+    //console.log(`Created new user: ${newUsername}`);
   }
 });
 
@@ -69,6 +64,6 @@ document.getElementById("deleteBtn").addEventListener("click", async (e) => {
   await fetch(`/api/users/${uname}`, {
     method: "DELETE",
   });
-  console.log(`Deleted user: ${uname}`);
-  window.location.href = `/profile.html?username=${uname}`;
+  //console.log(`Deleted user: ${uname}`);
+  window.location.href = `/profile.html`;
 });

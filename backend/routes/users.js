@@ -13,6 +13,7 @@ router.get("/", async (req, res) => {
 // get single user based on username in url
 router.get("/:username", async (req, res) => {
   const db = req.app.locals.db;
+  console.log("Fetching user with username:", req.params.username);
   const user = await db
     .collection("users")
     .findOne({ username: req.params.username });
@@ -25,6 +26,9 @@ router.get("/:username", async (req, res) => {
 router.post("/", async (req, res) => {
   const db = req.app.locals.db;
   const { name, username, email, industry_tags, location, bio } = req.body;
+
+  //console.log("params:", req.params);
+  //console.log("body:", req.body);
 
   const result = await db.collection("users").insertOne({
     name,
@@ -41,12 +45,10 @@ router.post("/", async (req, res) => {
 // put update user
 router.put("/:username", async (req, res) => {
   const db = req.app.locals.db;
-  // DELETETHIS
-  console.log("params:", req.params);
-  console.log("body:", req.body);
 
   const { name, username, email, industry_tags, location, bio } = req.body;
 
+  //console.log("Updating user with username:", req.params.username);
   const result = await db
     .collection("users")
     .updateOne(
