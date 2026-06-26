@@ -4,8 +4,8 @@ let max = 12;
 async function fetchUsers() {
   try {
     const res = await fetch("/api/users");
+    // just a suggestion to implement pagination so that if there are many users, the page doesn't get too long and slow to load
     const users = await res.json();
-    //console.log("Fetched users data:", users);
 
     const grid = document.getElementById("users-grid");
 
