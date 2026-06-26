@@ -3,15 +3,10 @@ import userRouter from "./routes/users.js";
 import { db } from "./db/my_mongodb.js";
 
 // EXPRESS SETUP
-("Initializing backend server for Grant Finder application...");
+console.log("Initializing backend server for Grant Finder application...");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-/** app.use((req, res, next) => {
-  console.log(`Incoming request: ${req.method} ${req.url}`);
-  next();
-});*/
 
 app.use(express.json());
 app.use(express.static("./frontend"));

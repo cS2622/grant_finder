@@ -12,7 +12,7 @@ Access the publically deployed site on Render at: https://grant-finder.onrender.
 
 ### Demo Screenshots
 
-In root repo.
+In root repo. //may be we should call the image.
 
 ## Video Demo
 
